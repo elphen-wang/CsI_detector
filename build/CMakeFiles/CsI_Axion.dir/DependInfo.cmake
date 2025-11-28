@@ -4,25 +4,30 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wangjun/workspace/CsI_Axion/detector/src/ActionInitialization.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o"
-  "/home/wangjun/workspace/CsI_Axion/detector/src/DetectorConstruction.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o"
-  "/home/wangjun/workspace/CsI_Axion/detector/src/DetectorSD.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o"
-  "/home/wangjun/workspace/CsI_Axion/detector/src/PhysicsList.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o"
-  "/home/wangjun/workspace/CsI_Axion/detector/src/PrimaryGeneratorAction.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o"
-  "/home/wangjun/workspace/CsI_Axion/detector/src/TrackingAction.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o"
-  "/home/wangjun/workspace/CsI_Axion/detector/src/Trajectory.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o"
-  "/home/wangjun/workspace/CsI_Axion/detector/src/main.cc" "/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/src/main.cc.o"
+  "/home/wxy/Program/CsI_detector/main.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/main.cc.o"
+  "/home/wxy/Program/CsI_detector/src/ActionInitialization.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o"
+  "/home/wxy/Program/CsI_detector/src/DetectorConstruction.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o"
+  "/home/wxy/Program/CsI_detector/src/DetectorSD.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o"
+  "/home/wxy/Program/CsI_detector/src/EventAction.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o"
+  "/home/wxy/Program/CsI_detector/src/PhysicsList.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o"
+  "/home/wxy/Program/CsI_detector/src/PrimaryGeneratorAction.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o"
+  "/home/wxy/Program/CsI_detector/src/RunAction.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o"
+  "/home/wxy/Program/CsI_detector/src/TrackingAction.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o"
+  "/home/wxy/Program/CsI_detector/src/Trajectory.cc" "/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "G4INTY_USE_QT"
+  "G4INTY_USE_XT"
   "G4LIB_BUILD_DLL"
   "G4UI_USE_QT"
   "G4UI_USE_TCSH"
   "G4VIS_USE_OPENGL"
   "G4VIS_USE_OPENGLQT"
+  "G4VIS_USE_OPENGLX"
+  "G4VIS_USE_RAYTRACERX"
   "QT_CORE_LIB"
   "QT_GUI_LIB"
   "QT_NO_DEBUG"
@@ -34,14 +39,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
-  "/home/Geant4/install/include/Geant4"
+  "/home/wxy/software/geant4-v10.7.4-install/include/Geant4"
   "/usr/include/x86_64-linux-gnu/qt5"
-  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
   "/usr/include/x86_64-linux-gnu/qt5/QtCore"
   "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
+  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
-  "/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"
   "/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"
+  "/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"
   )
 
 # Targets to which this target links.

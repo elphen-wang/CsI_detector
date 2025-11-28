@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wangjun/workspace/CsI_Axion/detector
+CMAKE_SOURCE_DIR = /home/wxy/Program/CsI_detector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wangjun/workspace/CsI_Axion/detector/build
+CMAKE_BINARY_DIR = /home/wxy/Program/CsI_detector/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CsI_Axion.dir/depend.make
@@ -57,125 +57,153 @@ include CMakeFiles/CsI_Axion.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CsI_Axion.dir/flags.make
 
-CMakeFiles/CsI_Axion.dir/src/main.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
-CMakeFiles/CsI_Axion.dir/src/main.cc.o: ../src/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CsI_Axion.dir/src/main.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/main.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/main.cc
+CMakeFiles/CsI_Axion.dir/main.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
+CMakeFiles/CsI_Axion.dir/main.cc.o: ../main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CsI_Axion.dir/main.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/main.cc.o -c /home/wxy/Program/CsI_detector/main.cc
 
-CMakeFiles/CsI_Axion.dir/src/main.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/main.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/main.cc > CMakeFiles/CsI_Axion.dir/src/main.cc.i
+CMakeFiles/CsI_Axion.dir/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/main.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/main.cc > CMakeFiles/CsI_Axion.dir/main.cc.i
 
-CMakeFiles/CsI_Axion.dir/src/main.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/main.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/main.cc -o CMakeFiles/CsI_Axion.dir/src/main.cc.s
+CMakeFiles/CsI_Axion.dir/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/main.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/main.cc -o CMakeFiles/CsI_Axion.dir/main.cc.s
 
 CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
 CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o: ../src/DetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/DetectorConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o -c /home/wxy/Program/CsI_detector/src/DetectorConstruction.cc
 
 CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/DetectorConstruction.cc > CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/DetectorConstruction.cc > CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.i
 
 CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/DetectorConstruction.cc -o CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/DetectorConstruction.cc -o CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.s
 
 CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
 CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o: ../src/PhysicsList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/PhysicsList.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o -c /home/wxy/Program/CsI_detector/src/PhysicsList.cc
 
 CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/PhysicsList.cc > CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/PhysicsList.cc > CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.i
 
 CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/PhysicsList.cc -o CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/PhysicsList.cc -o CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.s
 
 CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
 CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o: ../src/DetectorSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/DetectorSD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o -c /home/wxy/Program/CsI_detector/src/DetectorSD.cc
 
 CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/DetectorSD.cc > CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/DetectorSD.cc > CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.i
 
 CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/DetectorSD.cc -o CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/DetectorSD.cc -o CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.s
 
 CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
 CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o: ../src/PrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/PrimaryGeneratorAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o -c /home/wxy/Program/CsI_detector/src/PrimaryGeneratorAction.cc
 
 CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/PrimaryGeneratorAction.cc > CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/PrimaryGeneratorAction.cc > CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.i
 
 CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/PrimaryGeneratorAction.cc -o CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/PrimaryGeneratorAction.cc -o CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.s
 
 CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
 CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o: ../src/TrackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/TrackingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o -c /home/wxy/Program/CsI_detector/src/TrackingAction.cc
 
 CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/TrackingAction.cc > CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/TrackingAction.cc > CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.i
 
 CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/TrackingAction.cc -o CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/TrackingAction.cc -o CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.s
 
 CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
 CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o: ../src/ActionInitialization.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/ActionInitialization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o -c /home/wxy/Program/CsI_detector/src/ActionInitialization.cc
 
 CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/ActionInitialization.cc > CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/ActionInitialization.cc > CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.i
 
 CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/ActionInitialization.cc -o CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/ActionInitialization.cc -o CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.s
 
 CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
 CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o: ../src/Trajectory.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o -c /home/wangjun/workspace/CsI_Axion/detector/src/Trajectory.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o -c /home/wxy/Program/CsI_detector/src/Trajectory.cc
 
 CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangjun/workspace/CsI_Axion/detector/src/Trajectory.cc > CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/Trajectory.cc > CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.i
 
 CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangjun/workspace/CsI_Axion/detector/src/Trajectory.cc -o CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/Trajectory.cc -o CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.s
+
+CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
+CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o: ../src/RunAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o -c /home/wxy/Program/CsI_detector/src/RunAction.cc
+
+CMakeFiles/CsI_Axion.dir/src/RunAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/RunAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/RunAction.cc > CMakeFiles/CsI_Axion.dir/src/RunAction.cc.i
+
+CMakeFiles/CsI_Axion.dir/src/RunAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/RunAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/RunAction.cc -o CMakeFiles/CsI_Axion.dir/src/RunAction.cc.s
+
+CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o: CMakeFiles/CsI_Axion.dir/flags.make
+CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o: ../src/EventAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o -c /home/wxy/Program/CsI_detector/src/EventAction.cc
+
+CMakeFiles/CsI_Axion.dir/src/EventAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CsI_Axion.dir/src/EventAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/Program/CsI_detector/src/EventAction.cc > CMakeFiles/CsI_Axion.dir/src/EventAction.cc.i
+
+CMakeFiles/CsI_Axion.dir/src/EventAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CsI_Axion.dir/src/EventAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/Program/CsI_detector/src/EventAction.cc -o CMakeFiles/CsI_Axion.dir/src/EventAction.cc.s
 
 # Object files for target CsI_Axion
 CsI_Axion_OBJECTS = \
-"CMakeFiles/CsI_Axion.dir/src/main.cc.o" \
+"CMakeFiles/CsI_Axion.dir/main.cc.o" \
 "CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o" \
 "CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o" \
 "CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o" \
 "CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o" \
 "CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o" \
 "CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o" \
-"CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o"
+"CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o" \
+"CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o" \
+"CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o"
 
 # External object files for target CsI_Axion
 CsI_Axion_EXTERNAL_OBJECTS =
 
-CsI_Axion: CMakeFiles/CsI_Axion.dir/src/main.cc.o
+CsI_Axion: CMakeFiles/CsI_Axion.dir/main.cc.o
 CsI_Axion: CMakeFiles/CsI_Axion.dir/src/DetectorConstruction.cc.o
 CsI_Axion: CMakeFiles/CsI_Axion.dir/src/PhysicsList.cc.o
 CsI_Axion: CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.o
@@ -183,24 +211,32 @@ CsI_Axion: CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.o
 CsI_Axion: CMakeFiles/CsI_Axion.dir/src/TrackingAction.cc.o
 CsI_Axion: CMakeFiles/CsI_Axion.dir/src/ActionInitialization.cc.o
 CsI_Axion: CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.o
+CsI_Axion: CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o
+CsI_Axion: CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o
 CsI_Axion: CMakeFiles/CsI_Axion.dir/build.make
-CsI_Axion: /home/Geant4/install/lib/libG4Tree.so
-CsI_Axion: /home/Geant4/install/lib/libG4GMocren.so
-CsI_Axion: /home/Geant4/install/lib/libG4visHepRep.so
-CsI_Axion: /home/Geant4/install/lib/libG4RayTracer.so
-CsI_Axion: /home/Geant4/install/lib/libG4VRML.so
-CsI_Axion: /home/Geant4/install/lib/libG4OpenGL.so
-CsI_Axion: /home/Geant4/install/lib/libG4gl2ps.so
-CsI_Axion: /home/Geant4/install/lib/libG4interfaces.so
-CsI_Axion: /home/Geant4/install/lib/libG4persistency.so
-CsI_Axion: /home/Geant4/install/lib/libG4error_propagation.so
-CsI_Axion: /home/Geant4/install/lib/libG4readout.so
-CsI_Axion: /home/Geant4/install/lib/libG4physicslists.so
-CsI_Axion: /home/Geant4/install/lib/libG4parmodels.so
-CsI_Axion: /home/Geant4/install/lib/libG4FR.so
-CsI_Axion: /home/Geant4/install/lib/libG4vis_management.so
-CsI_Axion: /home/Geant4/install/lib/libG4modeling.so
-CsI_Axion: /usr/lib/x86_64-linux-gnu/libGLU.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4Tree.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4FR.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4GMocren.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4visHepRep.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4RayTracer.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4VRML.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4OpenGL.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4gl2ps.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4vis_management.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4modeling.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4interfaces.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4persistency.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4error_propagation.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4readout.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4physicslists.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4tasking.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4parmodels.so
+CsI_Axion: /usr/lib/x86_64-linux-gnu/libXmu.so
+CsI_Axion: /usr/lib/x86_64-linux-gnu/libXext.so
+CsI_Axion: /usr/lib/x86_64-linux-gnu/libXt.so
+CsI_Axion: /usr/lib/x86_64-linux-gnu/libICE.so
+CsI_Axion: /usr/lib/x86_64-linux-gnu/libSM.so
+CsI_Axion: /usr/lib/x86_64-linux-gnu/libX11.so
 CsI_Axion: /usr/lib/x86_64-linux-gnu/libGL.so
 CsI_Axion: /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so.5.12.8
 CsI_Axion: /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.12.8
@@ -208,24 +244,25 @@ CsI_Axion: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 CsI_Axion: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 CsI_Axion: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 CsI_Axion: /usr/lib/x86_64-linux-gnu/libxerces-c.so
-CsI_Axion: /home/Geant4/install/lib/libG4run.so
-CsI_Axion: /home/Geant4/install/lib/libG4event.so
-CsI_Axion: /home/Geant4/install/lib/libG4tracking.so
-CsI_Axion: /home/Geant4/install/lib/libG4processes.so
-CsI_Axion: /home/Geant4/install/lib/libG4analysis.so
-CsI_Axion: /home/Geant4/install/lib/libG4zlib.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4run.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4event.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4tracking.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4processes.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4analysis.so
 CsI_Axion: /usr/lib/x86_64-linux-gnu/libexpat.so
-CsI_Axion: /home/Geant4/install/lib/libG4digits_hits.so
-CsI_Axion: /home/Geant4/install/lib/libG4track.so
-CsI_Axion: /home/Geant4/install/lib/libG4particles.so
-CsI_Axion: /home/Geant4/install/lib/libG4geometry.so
-CsI_Axion: /home/Geant4/install/lib/libG4materials.so
-CsI_Axion: /home/Geant4/install/lib/libG4graphics_reps.so
-CsI_Axion: /home/Geant4/install/lib/libG4intercoms.so
-CsI_Axion: /home/Geant4/install/lib/libG4global.so
-CsI_Axion: /home/Geant4/install/lib/libG4clhep.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4digits_hits.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4track.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4particles.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4geometry.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4materials.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4zlib.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4graphics_reps.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4intercoms.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4global.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4clhep.so
+CsI_Axion: /home/wxy/software/geant4-v10.7.4-install/lib/libG4ptl.so.0.0.2
 CsI_Axion: CMakeFiles/CsI_Axion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CsI_Axion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable CsI_Axion"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CsI_Axion.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -238,6 +275,6 @@ CMakeFiles/CsI_Axion.dir/clean:
 .PHONY : CMakeFiles/CsI_Axion.dir/clean
 
 CMakeFiles/CsI_Axion.dir/depend:
-	cd /home/wangjun/workspace/CsI_Axion/detector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wangjun/workspace/CsI_Axion/detector /home/wangjun/workspace/CsI_Axion/detector /home/wangjun/workspace/CsI_Axion/detector/build /home/wangjun/workspace/CsI_Axion/detector/build /home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/wxy/Program/CsI_detector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wxy/Program/CsI_detector /home/wxy/Program/CsI_detector /home/wxy/Program/CsI_detector/build /home/wxy/Program/CsI_detector/build /home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CsI_Axion.dir/depend
 

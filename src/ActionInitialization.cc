@@ -1,6 +1,8 @@
 // ActionInitialization.cc
 #include "ActionInitialization.hh"
+#include "EventAction.hh"
 #include "PrimaryGeneratorAction.hh"
+#include "RunAction.hh"
 #include "TrackingAction.hh"
 
 ActionInitialization::ActionInitialization() {}
@@ -8,11 +10,12 @@ ActionInitialization::ActionInitialization() {}
 ActionInitialization::~ActionInitialization() {}
 
 void ActionInitialization::BuildForMaster() const {
-    // 主线程通常不注册动作（有RunAction时可注册）
+  SetUserAction(new RunAction());
 }
 
 void ActionInitialization::Build() const {
-    SetUserAction(new PrimaryGeneratorAction());
-    SetUserAction(new TrackingAction());
-    // 你可以根据需要添加 RunAction, EventAction 等
+  SetUserAction(new PrimaryGeneratorAction());
+  SetUserAction(new TrackingAction());
+  SetUserAction(new RunAction());
+  SetUserAction(new EventAction());
 }

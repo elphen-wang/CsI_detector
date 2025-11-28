@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wangjun/workspace/CsI_Axion/detector
+CMAKE_SOURCE_DIR = /home/wxy/Program/CsI_detector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wangjun/workspace/CsI_Axion/detector/build
+CMAKE_BINARY_DIR = /home/wxy/Program/CsI_detector/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/CsI_Axion.dir/clean
 CMakeFiles/CsI_Axion.dir/all:
 	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/depend
 	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target CsI_Axion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxy/Program/CsI_detector/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target CsI_Axion"
 .PHONY : CMakeFiles/CsI_Axion.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CsI_Axion.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxy/Program/CsI_detector/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CsI_Axion.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxy/Program/CsI_detector/build/CMakeFiles 0
 .PHONY : CMakeFiles/CsI_Axion.dir/rule
 
 # Convenience name for target.

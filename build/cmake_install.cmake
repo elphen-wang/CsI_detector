@@ -1,4 +1,4 @@
-# Install script for directory: /home/wangjun/workspace/CsI_Axion/detector
+# Install script for directory: /home/wxy/Program/CsI_detector
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wangjun/workspace/CsI_Axion/detector/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wxy/Program/CsI_detector/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -11,17 +11,24 @@ include_directories(
 )
 
 add_executable(CsI_Axion
-  src/main.cc
+  main.cc
   src/DetectorConstruction.cc
   src/PhysicsList.cc
   src/DetectorSD.cc
   src/PrimaryGeneratorAction.cc
   src/TrackingAction.cc
   src/ActionInitialization.cc
-  src/Trajectory.cc  # 确保这一行存在
+  src/Trajectory.cc
+  src/RunAction.cc
+  src/EventAction.cc
 )
 
 target_include_directories(CsI_Axion PRIVATE ${PROJECT_SOURCE_DIR}/include)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 target_link_libraries(CsI_Axion ${Geant4_LIBRARIES})
+
+# Copy all scripts in mac/ to the build directory
+file(GLOB MACRO_FILES "${PROJECT_SOURCE_DIR}/mac/*.mac")
+file(COPY ${MACRO_FILES} DESTINATION ${CMAKE_BINARY_DIR})
 

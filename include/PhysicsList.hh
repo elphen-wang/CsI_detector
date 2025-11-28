@@ -2,17 +2,12 @@
 #ifndef PHYSICS_LIST_HH
 #define PHYSICS_LIST_HH
 
-
-#include <FTFP_BERT.hh>  // 引入官方物理列表
+#include <FTFP_BERT.hh> // 引入官方物理列表
 
 class PhysicsList : public FTFP_BERT {
 public:
-    PhysicsList();
-    ~PhysicsList();
-    
-    void SetCuts() override;              // 设置粒子切割
+  PhysicsList();
+  ~PhysicsList();
 };
 
 #endif
-
-

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wangjun/workspace/CsI_Axion/detector
+CMAKE_SOURCE_DIR = /home/wxy/Program/CsI_detector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wangjun/workspace/CsI_Axion/detector/build
+CMAKE_BINARY_DIR = /home/wxy/Program/CsI_detector/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles /home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxy/Program/CsI_detector/build/CMakeFiles /home/wxy/Program/CsI_detector/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxy/Program/CsI_detector/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ CsI_Axion: cmake_check_build_system
 CsI_Axion/fast:
 	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/build
 .PHONY : CsI_Axion/fast
+
+main.o: main.cc.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cc.o:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/main.cc.o
+.PHONY : main.cc.o
+
+main.i: main.cc.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cc.i:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/main.cc.i
+.PHONY : main.cc.i
+
+main.s: main.cc.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cc.s:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/main.cc.s
+.PHONY : main.cc.s
 
 src/ActionInitialization.o: src/ActionInitialization.cc.o
 
@@ -204,6 +231,33 @@ src/DetectorSD.cc.s:
 	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/DetectorSD.cc.s
 .PHONY : src/DetectorSD.cc.s
 
+src/EventAction.o: src/EventAction.cc.o
+
+.PHONY : src/EventAction.o
+
+# target to build an object file
+src/EventAction.cc.o:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/EventAction.cc.o
+.PHONY : src/EventAction.cc.o
+
+src/EventAction.i: src/EventAction.cc.i
+
+.PHONY : src/EventAction.i
+
+# target to preprocess a source file
+src/EventAction.cc.i:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/EventAction.cc.i
+.PHONY : src/EventAction.cc.i
+
+src/EventAction.s: src/EventAction.cc.s
+
+.PHONY : src/EventAction.s
+
+# target to generate assembly for a file
+src/EventAction.cc.s:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/EventAction.cc.s
+.PHONY : src/EventAction.cc.s
+
 src/PhysicsList.o: src/PhysicsList.cc.o
 
 .PHONY : src/PhysicsList.o
@@ -257,6 +311,33 @@ src/PrimaryGeneratorAction.s: src/PrimaryGeneratorAction.cc.s
 src/PrimaryGeneratorAction.cc.s:
 	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/PrimaryGeneratorAction.cc.s
 .PHONY : src/PrimaryGeneratorAction.cc.s
+
+src/RunAction.o: src/RunAction.cc.o
+
+.PHONY : src/RunAction.o
+
+# target to build an object file
+src/RunAction.cc.o:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/RunAction.cc.o
+.PHONY : src/RunAction.cc.o
+
+src/RunAction.i: src/RunAction.cc.i
+
+.PHONY : src/RunAction.i
+
+# target to preprocess a source file
+src/RunAction.cc.i:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/RunAction.cc.i
+.PHONY : src/RunAction.cc.i
+
+src/RunAction.s: src/RunAction.cc.s
+
+.PHONY : src/RunAction.s
+
+# target to generate assembly for a file
+src/RunAction.cc.s:
+	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/RunAction.cc.s
+.PHONY : src/RunAction.cc.s
 
 src/TrackingAction.o: src/TrackingAction.cc.o
 
@@ -312,33 +393,6 @@ src/Trajectory.cc.s:
 	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/Trajectory.cc.s
 .PHONY : src/Trajectory.cc.s
 
-src/main.o: src/main.cc.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cc.o:
-	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/main.cc.o
-.PHONY : src/main.cc.o
-
-src/main.i: src/main.cc.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cc.i:
-	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/main.cc.i
-.PHONY : src/main.cc.i
-
-src/main.s: src/main.cc.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cc.s:
-	$(MAKE) -f CMakeFiles/CsI_Axion.dir/build.make CMakeFiles/CsI_Axion.dir/src/main.cc.s
-.PHONY : src/main.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -348,6 +402,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CsI_Axion"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... src/ActionInitialization.o"
 	@echo "... src/ActionInitialization.i"
 	@echo "... src/ActionInitialization.s"
@@ -357,21 +414,24 @@ help:
 	@echo "... src/DetectorSD.o"
 	@echo "... src/DetectorSD.i"
 	@echo "... src/DetectorSD.s"
+	@echo "... src/EventAction.o"
+	@echo "... src/EventAction.i"
+	@echo "... src/EventAction.s"
 	@echo "... src/PhysicsList.o"
 	@echo "... src/PhysicsList.i"
 	@echo "... src/PhysicsList.s"
 	@echo "... src/PrimaryGeneratorAction.o"
 	@echo "... src/PrimaryGeneratorAction.i"
 	@echo "... src/PrimaryGeneratorAction.s"
+	@echo "... src/RunAction.o"
+	@echo "... src/RunAction.i"
+	@echo "... src/RunAction.s"
 	@echo "... src/TrackingAction.o"
 	@echo "... src/TrackingAction.i"
 	@echo "... src/TrackingAction.s"
 	@echo "... src/Trajectory.o"
 	@echo "... src/Trajectory.i"
 	@echo "... src/Trajectory.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 
