@@ -1,0 +1,3 @@
+/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/rebuild_cache.dir
+/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/edit_cache.dir
+/home/wangjun/workspace/CsI_Axion/detector/build/CMakeFiles/CsI_Axion.dir
