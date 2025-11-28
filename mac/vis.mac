@@ -13,6 +13,21 @@
 # Draw coordinate axes:
 /vis/scene/add/axes 0 0 0 10 cm
 
+
+# 1. 创建一个基于粒子 ID 的绘图模型
+/vis/modeling/trajectories/create/drawByParticleID
+
+# 2. 设置电子 (e-) 为红色 (red)
+/vis/modeling/trajectories/drawByParticleID-0/set e- red
+
+# 3. 设置正电子 (e+) 为蓝色 (blue)
+/vis/modeling/trajectories/drawByParticleID-0/set e+ blue
+
+# (可选) 设置伽马射线 (gamma) 为绿色
+/vis/modeling/trajectories/drawByParticleID-0/set gamma green
+
+
+
 # Draw smooth trajectories at end of event, showing trajectory points
 # as markers 2 pixels wide:
 /vis/scene/add/trajectories smooth
