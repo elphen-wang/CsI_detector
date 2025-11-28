@@ -1,0 +1,13 @@
+# Initialize kernel
+/run/initialize
+
+# Set verbose levels (optional)
+/control/verbose 0
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+# Run simulation with 100 events
+# Note: Your PrimaryGeneratorAction.cc currently has a hardcoded limit 
+# that stops generating particles after eventID >= 100.
+/run/beamOn 100

@@ -27,8 +27,6 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction() { delete fParticleGun; }
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event) {
   // static G4int pairCount = 0;
-  // 每事件一次仿真可产生一个粒子对（一个电子一个正电子）
-  // 如果要一次事件产生全部100对，可以循环100次，否则分100个事件产生不同对
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
   G4ParticleDefinition *eMinus = particleTable->FindParticle("e-");
@@ -57,8 +55,8 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event) {
 
   G4ThreeVector vertexPos(centerX + localX, centerY + localY, centerZ + localZ);
 
-  // 动能在0到7 MeV之间均匀分布
-  G4double energyMeV = G4UniformRand() * 3.5 * MeV;
+  // 动能在0到8 MeV之间均匀分布
+  G4double energyMeV = G4UniformRand() * 4 * MeV;
 
   // 生成一对电子对，方向共线反向（假设沿随机单位矢量n和-n）
   G4double theta = acos(1 - 2 * G4UniformRand()); // 0~pi 均匀分布
