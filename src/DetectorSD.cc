@@ -11,7 +11,7 @@ G4ThreadLocal G4Allocator<CsIHit> *CsIHitAllocator = 0;
 CsIHit::CsIHit()
     : G4VHit(), fTrackID(-1), fChamberNb(-1), fEdep(0.), fPos(G4ThreeVector()),
       fTime(0.), fPDG(0), fParentID(-1), fMomentumDirection(G4ThreeVector()),
-      fKineticEnergy(0.), fCreatorProcess("") {}
+      fKineticEnergy(0.), fCreatorProcess(""), fTrackLength(0.) {}
 CsIHit::~CsIHit() {}
 CsIHit::CsIHit(const CsIHit &right) : G4VHit() {
   fTrackID = right.fTrackID;
@@ -24,6 +24,7 @@ CsIHit::CsIHit(const CsIHit &right) : G4VHit() {
   fMomentumDirection = right.fMomentumDirection;
   fKineticEnergy = right.fKineticEnergy;
   fCreatorProcess = right.fCreatorProcess;
+  fTrackLength = right.fTrackLength;
 }
 const CsIHit &CsIHit::operator=(const CsIHit &right) {
   fTrackID = right.fTrackID;
@@ -36,6 +37,7 @@ const CsIHit &CsIHit::operator=(const CsIHit &right) {
   fMomentumDirection = right.fMomentumDirection;
   fKineticEnergy = right.fKineticEnergy;
   fCreatorProcess = right.fCreatorProcess;
+  fTrackLength = right.fTrackLength;
   return *this;
 }
 int CsIHit::operator==(const CsIHit &right) const {
@@ -84,6 +86,8 @@ G4bool DetectorSD::ProcessHits(G4Step *step, G4TouchableHistory *) {
   if (hit) {
     // Add energy to existing hit
     hit->AddEdep(edep);
+    // Add step length to track length
+    hit->AddTrackLength(step->GetStepLength());
     // Keep the earliest time
     if (preStepPoint->GetGlobalTime() < hit->GetTime()) {
       hit->SetTime(preStepPoint->GetGlobalTime());
@@ -100,6 +104,7 @@ G4bool DetectorSD::ProcessHits(G4Step *step, G4TouchableHistory *) {
     hit->SetParentID(step->GetTrack()->GetParentID());
     hit->SetMomentumDirection(preStepPoint->GetMomentumDirection());
     hit->SetKineticEnergy(preStepPoint->GetKineticEnergy());
+    hit->SetTrackLength(step->GetStepLength());
     const G4VProcess *creatorProcess = step->GetTrack()->GetCreatorProcess();
     if (creatorProcess) {
       hit->SetCreatorProcess(creatorProcess->GetProcessName());

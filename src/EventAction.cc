@@ -64,6 +64,7 @@ void EventAction::EndOfEventAction(const G4Event *event) {
   auto &crystalDirZ = nonConstRunAction->GetCrystalDirZ();
   auto &crystalKineticEnergy = nonConstRunAction->GetCrystalKineticEnergy();
   auto &crystalProcessIDs = nonConstRunAction->GetCrystalProcessIDs();
+  auto &crystalTrackLength = nonConstRunAction->GetCrystalTrackLength();
 
   // Primary Particle Vectors
   auto &primaryPDG = nonConstRunAction->GetPrimaryPDG();
@@ -89,6 +90,7 @@ void EventAction::EndOfEventAction(const G4Event *event) {
   crystalDirZ.clear();
   crystalKineticEnergy.clear();
   crystalProcessIDs.clear();
+  crystalTrackLength.clear();
 
   primaryPDG.clear();
   primaryEnergy.clear();
@@ -143,6 +145,7 @@ void EventAction::EndOfEventAction(const G4Event *event) {
       crystalKineticEnergy.push_back(hit->GetKineticEnergy());
       crystalProcessIDs.push_back(
           nonConstRunAction->GetProcessID(hit->GetCreatorProcess()));
+      crystalTrackLength.push_back(hit->GetTrackLength());
     }
   } // Fill Ntuple
   analysisManager->FillNtupleIColumn(0, event->GetEventID());

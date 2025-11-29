@@ -33,6 +33,8 @@ RunAction::RunAction() : G4UserRunAction() {
   analysisManager->CreateNtupleDColumn("CrystalKineticEnergy",
                                        fCrystalKineticEnergy);
   analysisManager->CreateNtupleIColumn("CrystalProcessID", fCrystalProcessIDs);
+  analysisManager->CreateNtupleDColumn("CrystalTrackLength",
+                                       fCrystalTrackLength);
 
   // Primary Particle Columns
   analysisManager->CreateNtupleIColumn("PrimaryPDG", fPrimaryPDG);

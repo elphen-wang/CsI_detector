@@ -34,6 +34,8 @@ public:
   }
   void SetKineticEnergy(G4double e) { fKineticEnergy = e; }
   void SetCreatorProcess(const G4String &proc) { fCreatorProcess = proc; }
+  void SetTrackLength(G4double len) { fTrackLength = len; }
+  void AddTrackLength(G4double len) { fTrackLength += len; }
 
   G4int GetTrackID() const { return fTrackID; }
   G4int GetChamberNb() const { return fChamberNb; }
@@ -45,6 +47,7 @@ public:
   G4ThreeVector GetMomentumDirection() const { return fMomentumDirection; }
   G4double GetKineticEnergy() const { return fKineticEnergy; }
   G4String GetCreatorProcess() const { return fCreatorProcess; }
+  G4double GetTrackLength() const { return fTrackLength; }
 
 private:
   G4int fTrackID;
@@ -57,6 +60,7 @@ private:
   G4ThreeVector fMomentumDirection;
   G4double fKineticEnergy;
   G4String fCreatorProcess;
+  G4double fTrackLength;
 };
 
 typedef G4THitsCollection<CsIHit> CsIHitsCollection;

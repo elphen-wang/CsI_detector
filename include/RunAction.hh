@@ -30,6 +30,7 @@ public:
     return fCrystalKineticEnergy;
   }
   std::vector<int> &GetCrystalProcessIDs() { return fCrystalProcessIDs; }
+  std::vector<double> &GetCrystalTrackLength() { return fCrystalTrackLength; }
 
   // Primary Particle Getters
   std::vector<int> &GetPrimaryPDG() { return fPrimaryPDG; }
@@ -57,6 +58,7 @@ private:
   std::vector<double> fCrystalDirZ;
   std::vector<double> fCrystalKineticEnergy;
   std::vector<int> fCrystalProcessIDs;
+  std::vector<double> fCrystalTrackLength;
 
   // Primary Particle Vectors
   std::vector<int> fPrimaryPDG;
