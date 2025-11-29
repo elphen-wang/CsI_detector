@@ -2,11 +2,19 @@
 #include "PhysicsList.hh"
 #include "G4DecayPhysics.hh"
 #include "G4EmStandardPhysics_option4.hh"
+#include "G4OpticalPhysics.hh"
 #include "G4SystemOfUnits.hh"
 
 PhysicsList::PhysicsList()
     : G4VModularPhysicsList() // 从头构建，不继承FTFP_BERT
 {
+  fMessenger =
+      new G4GenericMessenger(this, "/CsI/physics/", "Physics List Control");
+  fMessenger->DeclareMethod("optical", &PhysicsList::SetOpticalPhysics,
+                            "Enable Optical Physics");
+  fMessenger->DeclareMethod("verbose", &PhysicsList::SetVerboseLevel,
+                            "Set physics list verbose level");
+
   SetVerboseLevel(1);
 
   // 对于低能电子/正电子（0-4 MeV）模拟，只需要：
@@ -17,7 +25,14 @@ PhysicsList::PhysicsList()
   RegisterPhysics(new G4DecayPhysics());
 
   // 设置次级粒子产生阈值（可选，提高精度）
-  SetDefaultCutValue(0.1 * mm); // 默认产生次级粒子的阈值
+  SetDefaultCutValue(0.001 * mm); // 默认产生次级粒子的阈值
 }
 
-PhysicsList::~PhysicsList() {}
+PhysicsList::~PhysicsList() { delete fMessenger; }
+
+void PhysicsList::SetOpticalPhysics(G4bool on) {
+  if (on) {
+    RegisterPhysics(new G4OpticalPhysics());
+    G4cout << ">>> Optical Physics Enabled!" << '\n';
+  }
+}

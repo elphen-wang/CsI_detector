@@ -55,6 +55,41 @@ G4VPhysicalVolume *DetectorConstruction::Construct() {
   // =========================
   G4Material *csiMat = nist->FindOrBuildMaterial("G4_CESIUM_IODIDE");
 
+  // --- Optical Properties for CsI ---
+  G4MaterialPropertiesTable *mptCsI = new G4MaterialPropertiesTable();
+
+  // Refractive Index (RINDEX)
+  // CsI refractive index is around 1.79
+  const G4int nEntries = 2;
+  G4double photonEnergy[nEntries] = {2.0 * eV, 4.0 * eV}; // Visible range
+  G4double rIndex[nEntries] = {1.79, 1.79};
+
+  mptCsI->AddProperty("RINDEX", photonEnergy, rIndex, nEntries);
+
+  // Scintillation Properties (Pure CsI or CsI(Tl))
+  // Using typical values for CsI(Tl) for demonstration
+  // Light Yield: ~54 photons/keV for CsI(Tl), ~2000 photons/MeV for Pure CsI?
+  // Pure CsI: ~2000 ph/MeV. CsI(Tl): ~54000 ph/MeV.
+  // Let's assume CsI(Tl) as it's common for detectors.
+  mptCsI->AddConstProperty("SCINTILLATIONYIELD", 54000. / MeV);
+  mptCsI->AddConstProperty("RESOLUTIONSCALE", 1.0);
+
+  // For Geant4 11+
+  mptCsI->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 1000. * ns);
+  mptCsI->AddConstProperty("SCINTILLATIONCOMPONENT1", 1.0);
+
+  // For older Geant4 versions (compatibility)
+  mptCsI->AddConstProperty("FASTTIMECONSTANT", 1000. * ns);
+  mptCsI->AddConstProperty("SLOWTIMECONSTANT", 1000. * ns);
+  mptCsI->AddConstProperty("YIELDRATIO", 1.0);
+
+  // Absorption Length
+  G4double absLength[nEntries] = {35. * cm, 35. * cm}; // Transparent
+  mptCsI->AddProperty("ABSLENGTH", photonEnergy, absLength, nEntries);
+
+  csiMat->SetMaterialPropertiesTable(mptCsI);
+  // ----------------------------------
+
   // CsI Solid
   G4Box *csiBox =
       new G4Box("CsI", crystalSize / 2, crystalSize / 2, crystalSize / 2);

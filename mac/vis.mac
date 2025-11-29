@@ -26,6 +26,9 @@
 # (可选) 设置伽马射线 (gamma) 为绿色
 /vis/modeling/trajectories/drawByParticleID-0/set gamma green
 
+# 设置光子 (opticalphoton) 为青色
+/vis/modeling/trajectories/drawByParticleID-0/set opticalphoton cyan
+
 
 
 # Draw smooth trajectories at end of event, showing trajectory points
@@ -36,4 +39,4 @@
 /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
 
 # To superimpose all of the events from a given run:
-/vis/scene/endOfEventAction accumulate
+/vis/scene/endOfEventAction accumulate 1000

@@ -1,5 +1,7 @@
 # Initialize kernel
+
 /run/initialize
 
+/CsI/physics/optical true
 # Visualization setting
 /control/execute vis.mac
