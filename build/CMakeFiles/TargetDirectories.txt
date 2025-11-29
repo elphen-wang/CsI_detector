@@ -1,3 +1,0 @@
-/home/wxy/Program/CsI_detector/build/CMakeFiles/rebuild_cache.dir
-/home/wxy/Program/CsI_detector/build/CMakeFiles/edit_cache.dir
-/home/wxy/Program/CsI_detector/build/CMakeFiles/CsI_Axion.dir
