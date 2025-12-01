@@ -25,7 +25,7 @@ PhysicsList::PhysicsList()
   RegisterPhysics(new G4DecayPhysics());
 
   // 3. 光学物理 (默认开启，方便调试)
-  RegisterPhysics(new G4OpticalPhysics());
+  // RegisterPhysics(new G4OpticalPhysics());
 
   // 设置次级粒子产生阈值（可选，提高精度）
   SetDefaultCutValue(0.001 * mm); // 默认产生次级粒子的阈值
@@ -35,8 +35,8 @@ PhysicsList::~PhysicsList() { delete fMessenger; }
 
 void PhysicsList::SetOpticalPhysics(G4bool on) {
   G4cout << ">>> SetOpticalPhysics called with: " << on << '\n';
-  // if (on) {
-  //   RegisterPhysics(new G4OpticalPhysics());
-  //   G4cout << ">>> Optical Physics Enabled!" << '\n';
-  // }
+  if (on) {
+    RegisterPhysics(new G4OpticalPhysics());
+    G4cout << ">>> Optical Physics Enabled!" << '\n';
+  }
 }

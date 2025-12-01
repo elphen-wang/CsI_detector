@@ -64,6 +64,7 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event) {
   G4double centerY = fStartY + iy * (fCrystalSize + fGap);
   G4double centerZ = fStartZ + iz * (fCrystalSize + fGap);
 
+  CLHEP::HepRandom::setTheSeed(event->GetEventID());
   // 晶体内均匀撒点，坐标偏移[-crystalSize/2, crystalSize/2]
   G4double localX = (G4UniformRand() - 0.5) * fCrystalSize;
   G4double localY = (G4UniformRand() - 0.5) * fCrystalSize;

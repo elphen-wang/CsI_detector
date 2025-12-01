@@ -98,7 +98,7 @@ G4VPhysicalVolume *DetectorConstruction::Construct() {
   // Using typical values for CsI(Tl) for demonstration
   // Light Yield: ~54 photons/keV for CsI(Tl), ~2000 photons/MeV for Pure CsI?
   // Pure CsI: ~2000 ph/MeV. CsI(Tl): ~54000 ph/MeV.
-  // Let's assume CsI(Tl) as it's common for detectors.
+  // assume CsI(Tl) as it's common for detectors.
   mptCsI->AddConstProperty("SCINTILLATIONYIELD", 54000. / MeV);
   mptCsI->AddConstProperty("RESOLUTIONSCALE", 1.0);
 
