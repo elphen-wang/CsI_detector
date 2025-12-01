@@ -2,6 +2,7 @@
 #ifndef DETECTOR_CONSTRUCTION_HH
 #define DETECTOR_CONSTRUCTION_HH
 
+#include "G4GenericMessenger.hh"
 #include "G4SystemOfUnits.hh"
 #include <G4LogicalVolume.hh>
 #include <G4VPhysicalVolume.hh>
@@ -19,6 +20,10 @@ public:
   G4double gap = 1 * mm;         // 间隙
   virtual G4VPhysicalVolume *Construct();
   virtual void ConstructSDandField();
+
+private:
+  G4GenericMessenger *fMessenger;
+  G4String fGapMaterial;
 };
 
 #endif

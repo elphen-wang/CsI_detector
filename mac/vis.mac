@@ -39,4 +39,4 @@
 /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
 
 # To superimpose all of the events from a given run:
-/vis/scene/endOfEventAction accumulate 1000
+/vis/scene/endOfEventAction accumulate 10000

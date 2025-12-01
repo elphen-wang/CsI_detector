@@ -1,4 +1,5 @@
 # Initialize kernel
+/CsI/physics/optical 1
 /run/initialize
 
 # Set verbose levels (optional)
