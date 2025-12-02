@@ -17,9 +17,16 @@ public:
 private:
   G4ParticleGun *fParticleGun;
   G4GenericMessenger *fMessenger;
+  G4GenericMessenger *fRandMessenger;
 
   // Configurable parameters
   G4double fMaxEnergy;
+  G4String fMode;           // "ePair", "ePairOpposite", "ePairDeflected"
+  G4double fDeflectAngle;   // in degrees for deflected two-particle mode
+  G4double fParticleEnergy; // energy for generated particles (MeV)
+  // Random seed control
+  G4bool fAutoSeed;
+  G4long fSeed;
 
   // Cached particle definitions
   G4ParticleDefinition *fElectron;
@@ -33,6 +40,8 @@ private:
   G4double fStartX, fStartY, fStartZ;
 
   void InitializeArrayGeometry();
+  // Random seed control: apply seeds at runtime
+  void ApplyRandomSeed();
 };
 
 #endif

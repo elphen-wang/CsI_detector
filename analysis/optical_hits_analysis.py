@@ -17,16 +17,16 @@ optical_hits_analysis.py
 如果没有提供 ROOT 文件，默认使用 build/CsI_Axion.root
 """
 
-import sys
 import os
+import sys
 from collections import defaultdict
 
 try:
-    import uproot
     import awkward as ak
+    import matplotlib.pyplot as plt
     import numpy as np
     import pandas as pd
-    import matplotlib.pyplot as plt
+    import uproot
 except Exception as e:
     print("Missing dependency:", e)
     print("Please install requirements: pip install uproot awkward numpy pandas matplotlib")
@@ -117,7 +117,7 @@ def analyze(root_path: str = "build/CsI_Axion.root"):
         topn = 20
         fig, ax = plt.subplots(figsize=(10, 6))
         df_top = df.head(topn)
-        ax.bar(df_top["CrystalID"].astype(str), df_top["TotalExitCount"]) 
+        ax.bar(df_top["CrystalID"].astype(str), df_top["TotalExitCount"])
         ax.set_xlabel("CrystalID")
         ax.set_ylabel("Total exiting optical photons")
         ax.set_title(f"Top {topn} crystals by exiting optical photons")
@@ -140,6 +140,6 @@ def analyze(root_path: str = "build/CsI_Axion.root"):
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     root_path = sys.argv[1] if len(sys.argv) > 1 else "build/CsI_Axion.root"
     sys.exit(analyze(root_path))

@@ -1,6 +1,12 @@
 # Initialize kernel
 /CsI/physics/optical 1
-/run/initialize
 
-# Visualization setting
+/run/initialize
+# /CsI/detector/gapMaterial OpticalGrease
+/CsI/generator/particleEnergy 10 MeV
+/CsI/generator/mode ePairDeflected
+
+/CsI/random/autoSeed true
+/CsI/random/apply
+
 /control/execute vis.mac

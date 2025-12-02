@@ -71,6 +71,17 @@ def load_and_process_data(root_file, cache=True, config_file="data_config.json",
     # 加载配置
     config = load_config(config_file)
 
+    # 如果配置中启用了 photon_settings，扩展 event_level 分支以包含 photon 相关向量
+    photon_cfg = config.get("photon_settings", {})
+    if photon_cfg.get("save_exit_counts", False):
+        exit_names = photon_cfg.get("exit_branch_names", {})
+        exit_ids_name = exit_names.get("ids", "PhotonExitCrystalIDs")
+        exit_counts_name = exit_names.get("counts", "PhotonExitCounts")
+        # 做一个本地的 event_level 分支列表副本并扩展
+        event_level_branches = list(config["branches"]["event_level"]) + [exit_ids_name, exit_counts_name]
+    else:
+        event_level_branches = list(config["branches"]["event_level"])
+
     base_name = os.path.splitext(root_file)[0]
     map_file = base_name + config["cache_suffix"]["process_map"]
     process_map = load_process_map(map_file)
@@ -89,7 +100,15 @@ def load_and_process_data(root_file, cache=True, config_file="data_config.json",
     tree = file[tree_name]
 
     # 从配置文件读取所有需要的分支
-    branches = config["branches"]["event_level"] + config["branches"]["crystal_hits"] + config["branches"]["primary_particles"]
+    branches = event_level_branches + config["branches"]["crystal_hits"] + config["branches"]["primary_particles"] + config["branches"]["photon_exit"]
+
+    # 过滤掉不存在的分支
+    available_branches = set(tree.keys())
+    original_branches = branches[:]
+    branches = [b for b in branches if b in available_branches]
+    if len(branches) < len(original_branches):
+        missing = set(original_branches) - set(branches)
+        print(f"[Warning] Some branches not found in ROOT file: {missing}. Skipping them.")
 
     # 读取为 awkward array
     data_ak = tree.arrays(branches, library="ak")
@@ -101,7 +120,7 @@ def load_and_process_data(root_file, cache=True, config_file="data_config.json",
     df_primaries = None
 
     if cache and os.path.exists(hits_cache) and os.path.exists(primaries_cache):
-        print(f"Loading DataFrames from cache...")
+        print("Loading DataFrames from cache...")
         try:
             df_hits = pd.read_parquet(hits_cache)
             df_primaries = pd.read_parquet(primaries_cache)
@@ -149,7 +168,7 @@ def load_and_process_data(root_file, cache=True, config_file="data_config.json",
 
         # 保存缓存
         if cache:
-            print(f"Saving DataFrame caches...")
+            print("Saving DataFrame caches...")
             df_hits.to_parquet(hits_cache)
             df_primaries.to_parquet(primaries_cache)
 
@@ -187,7 +206,24 @@ def load_awkward_only(root_file, config_file="data_config.json"):
     tree = file[tree_name]
 
     # 从配置文件读取所有需要的分支
-    branches = config["branches"]["event_level"] + config["branches"]["crystal_hits"] + config["branches"]["primary_particles"]
+    photon_cfg = config.get("photon_settings", {})
+    if photon_cfg.get("save_exit_counts", False):
+        exit_names = photon_cfg.get("exit_branch_names", {})
+        exit_ids_name = exit_names.get("ids", "PhotonExitCrystalIDs")
+        exit_counts_name = exit_names.get("counts", "PhotonExitCounts")
+        event_branches = list(config["branches"]["event_level"]) + [exit_ids_name, exit_counts_name]
+    else:
+        event_branches = list(config["branches"]["event_level"])
+
+    branches = event_branches + config["branches"]["crystal_hits"] + config["branches"]["primary_particles"]
+
+    # 过滤掉不存在的分支
+    available_branches = set(tree.keys())
+    original_branches = branches[:]
+    branches = [b for b in branches if b in available_branches]
+    if len(branches) < len(original_branches):
+        missing = set(original_branches) - set(branches)
+        print(f"[Warning] Some branches not found in ROOT file: {missing}. Skipping them.")
 
     # 读取为 awkward array
     data_ak = tree.arrays(branches, library="ak")
@@ -215,6 +251,12 @@ def get_awkward_arrays(data_ak, config_file="data_config.json"):
     event_branches = config["branches"]["event_level"]
     hit_branches = config["branches"]["crystal_hits"]
     primary_branches = config["branches"]["primary_particles"]
+
+    # 检查并过滤不存在的分支
+    available_branches = set(data_ak.fields)
+    event_branches = [b for b in event_branches if b in available_branches]
+    hit_branches = [b for b in hit_branches if b in available_branches]
+    primary_branches = [b for b in primary_branches if b in available_branches]
 
     event_data = data_ak[event_branches]
     hits_data = data_ak[hit_branches]

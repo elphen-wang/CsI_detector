@@ -40,6 +40,17 @@
 # /vis/filtering/trajectories/particleFilter-0/invert true
 # ==============================================================
 
+# ==============================================================
+# 只显示那些曾进入 CsI_crystal 体积的整条轨迹（使用 encounteredVolumeFilter）
+# 注意：此过滤器会保留整条轨迹（包括在 world 中的段），但只保留那些
+#       曾进入指定体积的轨迹。如果你需要只绘制晶体内部的段，需使用
+#       drawByEncounteredVolume 模型（部分 Geant4 构建可能不包含该模型）。
+# ==============================================================
+/vis/filtering/trajectories/create/encounteredVolumeFilter
+/vis/filtering/trajectories/encounteredVolumeFilter-0/add CsI_crystal
+/vis/filtering/trajectories/encounteredVolumeFilter-0/invert false
+# ==============================================================
+
 # Draw smooth trajectories at end of event, showing trajectory points
 # as markers 2 pixels wide:
 /vis/scene/add/trajectories smooth
@@ -48,5 +59,5 @@
 /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
 
 # To superimpose all of the events from a given run:
-/vis/ogl/set/displayListLimit 1000
+/vis/ogl/set/displayListLimit 10000
 /vis/scene/endOfEventAction accumulate 1000

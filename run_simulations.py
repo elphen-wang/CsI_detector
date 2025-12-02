@@ -93,7 +93,9 @@ def run_single_job(args):
         # Generate macro
         mac_content = f"""
 /run/initialize
-/random/setSeeds {job_id} {job_id + 12345}
+/CsI/generator/mode ePairDeflected
+/CsI/random/seed {job_id} {job_id + 12345}
+/CsI/random/apply  1
 /run/beamOn {config.events_per_job}
 """
         mac_path = os.path.join(work_dir, "run.mac")
