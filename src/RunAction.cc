@@ -48,7 +48,8 @@ RunAction::RunAction() : G4UserRunAction() {
   analysisManager->CreateNtupleDColumn("PrimaryDirZ", fPrimaryDirZ);
 
   // Photon Exit Columns
-  analysisManager->CreateNtupleIColumn("PhotonExitCrystalID", fPhotonExitCrystalIDs);
+  analysisManager->CreateNtupleIColumn("PhotonExitCrystalID",
+                                       fPhotonExitCrystalIDs);
   analysisManager->CreateNtupleIColumn("PhotonExitCount", fPhotonExitCounts);
 
   analysisManager->FinishNtuple();

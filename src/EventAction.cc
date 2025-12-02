@@ -8,6 +8,7 @@
 #include "G4SDManager.hh"
 #include "G4SystemOfUnits.hh"
 #include "g4root.hh"
+#include <G4ios.hh>
 
 EventAction::EventAction() : G4UserEventAction(), fHCID(-1) {}
 
@@ -158,20 +159,28 @@ void EventAction::EndOfEventAction(const G4Event *event) {
           nonConstRunAction->GetProcessID(hit->GetCreatorProcess()));
       crystalTrackLength.push_back(hit->GetTrackLength());
     }
-  } // Fill Ntuple
+  }
+
+  // Fill Photon Exit Counts
+  SteppingAction *steppingAction =
+      const_cast<SteppingAction *>(static_cast<const SteppingAction *>(
+          G4RunManager::GetRunManager()->GetUserSteppingAction()));
+  const auto &exitCounts = steppingAction->GetPhotonExitCounts();
+  // G4cout << "Photon exit counts: " << exitCounts.size() << "\n";
+  for (const auto &pair : exitCounts) {
+    photonExitCrystalIDs.push_back(pair.first);
+    photonExitCounts.push_back(pair.second);
+  }
+  G4cout << "Filled PhotonExitCrystalIDs with " << photonExitCrystalIDs.size()
+         << " entries.\n";
+  // Reset counts for next event
+  steppingAction->ResetCounts();
+
+  // Fill Ntuple
   analysisManager->FillNtupleIColumn(0, event->GetEventID());
   analysisManager->FillNtupleDColumn(1, totalEdep);
   analysisManager->FillNtupleIColumn(2, crystalIDs.size());
+
   // vector columns are automatically filled because they are bound by reference
   analysisManager->AddNtupleRow();
-
-  // Fill Photon Exit Counts
-  SteppingAction* steppingAction = const_cast<SteppingAction*>(static_cast<const SteppingAction*>(G4RunManager::GetRunManager()->GetUserSteppingAction()));
-  const auto& exitCounts = steppingAction->GetPhotonExitCounts();
-  for (const auto& pair : exitCounts) {
-      photonExitCrystalIDs.push_back(pair.first);
-      photonExitCounts.push_back(pair.second);
-  }
-  // Reset counts for next event
-  steppingAction->ResetCounts();
 }

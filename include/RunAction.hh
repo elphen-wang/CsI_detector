@@ -44,7 +44,11 @@ public:
   std::vector<double> &GetPrimaryDirZ() { return fPrimaryDirZ; }
 
   // Photon Exit Getters
-  std::vector<int> &GetPhotonExitCrystalIDs() { return fPhotonExitCrystalIDs; }
+  std::vector<int> &GetPhotonExitCrystalIDs() {
+    G4cout << "Accessing PhotonExitCrystalIDs\n";
+    G4cout << fPhotonExitCounts.size() << G4endl;
+    return fPhotonExitCrystalIDs;
+  }
   std::vector<int> &GetPhotonExitCounts() { return fPhotonExitCounts; }
 
   int GetProcessID(const G4String &processName);

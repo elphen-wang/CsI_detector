@@ -31,6 +31,10 @@
             "PrimaryDirX",
             "PrimaryDirY",
             "PrimaryDirZ"
+        ],
+        "photon_exit": [
+            "PhotonExitCrystalID",
+            "PhotonExitCount"
         ]
     },
     "column_mapping": {
@@ -49,7 +53,9 @@
             "CrystalProcessID": "processID",
             "CrystalID": "crystalID",
             "CrystalTrackLength": "trackLength",
-            "CrystalTrackID": "trackID"
+            "CrystalTrackID": "trackID",
+            "CrystalPhotonID": "PhotonExitCrystalID",
+            "CrystalPhotonCount": "PhotonExitCount"
         },
         "primaries": {
             "PrimaryPDG": "pdg",

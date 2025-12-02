@@ -14,6 +14,10 @@ void TrackingAction::PreUserTrackingAction(const G4Track *track) {
   // if (track->GetDefinition() == G4OpticalPhoton::OpticalPhotonDefinition())
   // return;
 
+  // if (track->GetDefinition() == G4OpticalPhoton::OpticalPhotonDefinition()) {
+  //   G4cout << "Optical photon created\n";
+  // }
+
   G4TrackingManager *tm =
       G4EventManager::GetEventManager()->GetTrackingManager();
   Trajectory *trajectory = new Trajectory(track);

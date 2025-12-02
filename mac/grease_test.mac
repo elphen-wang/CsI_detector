@@ -1,7 +1,9 @@
 # 设置间隙材料为光学硅脂
+/CsI/physics/optical 1
 /CsI/detector/gapMaterial OpticalGrease
 
 # 然后初始化
 /run/initialize
 
-/run/beamOn 100
+
+/run/beamOn 1

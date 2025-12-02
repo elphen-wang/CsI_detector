@@ -119,7 +119,7 @@ G4bool DetectorSD::ProcessHits(G4Step *step, G4TouchableHistory *) {
 void DetectorSD::EndOfEvent(G4HCofThisEvent *) {
   if (verboseLevel > 1) {
     G4int nofHits = fHitsCollection->entries();
-    G4cout << G4endl << "-------->Hits Collection: in this event they are "
-           << nofHits << " hits in the tracker chambers: " << G4endl;
+    G4cout << "\n-------->Hits Collection: in this event they are " << nofHits
+           << " hits in the tracker chambers: " << "\n";
   }
 }
